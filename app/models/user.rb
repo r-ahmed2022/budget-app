@@ -1,5 +1,7 @@
 class User < ApplicationRecord
-    attr_accessor :role
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+     attr_accessor :role
 
     devise :database_authenticatable, :registerable,
           :recoverable, :rememberable, :validatable
