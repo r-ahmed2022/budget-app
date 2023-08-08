@@ -16,3 +16,143 @@
  
  @import "bootstrap";
 
+ .main-content {
+    width: 90%;
+    height: 100%;
+    margin: 3rem auto;
+  }
+  
+  .left-arrow {
+    background-color: transparent;
+    filter: invert(100%);
+    border: none;
+  }
+  
+  .no-outline {
+    outline: none;
+  }
+  
+  .category {
+    box-shadow: -1px -1px 2px 2px #c19e7f;
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #d3e0d6;
+    color: #1c1c1c;
+    position: relative;
+  }
+  
+  input {
+    background-color: #d3e0d6;
+  }
+  
+  .notinput {
+    background-color: #d3e0d6;
+  }
+  
+  .category-title {
+    position: relative;
+  }
+  
+  .category-title::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -5px;
+    height: 20%;
+    background-color: #c19e7f;
+  }
+  
+  .category-image {
+    height: 4rem;
+    width: 4rem;
+    margin: 1rem;
+  }
+  
+  .category-date {
+    font-size: 0.7rem;
+  }
+  
+  .generic-alert {
+    margin: 0.6rem;
+    text-align: center;
+    color: var(--white1);
+  }
+  
+  a {
+    text-decoration: none !important;
+  }
+  
+  .transaction-image {
+    height: 2rem;
+    width: 2rem;
+  }
+  
+  .check-box-form > label {
+    color: var(--text);
+    font-family: 'Proxima Nova Alt Lt', serif;
+  }
+  
+  .check-box-form > label > input {
+    margin-right: 0.5rem;
+  }
+  
+  .pie-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+    .category-title:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: -5px;
+      height: 20%;
+      background-color: #c19e7f;
+    }
+    
+    .category-image {
+      height: 4rem;
+      width: 4rem;
+      margin: 1rem;
+    }
+    
+    .category-date {
+      font-size: 0.7rem;
+    }
+    
+    .generic-alert {
+      margin: 0.6rem;
+      text-align: center;
+      color: var(--white1);
+    }
+    
+    a {
+      text-decoration: none !important;
+    }
+    
+    .transaction-image {
+      height: 2rem;
+      width: 2rem;
+    }
+    
+    .check-box-form > label {
+      color: var(--text);
+      font-family: 'Proxima Nova Alt Lt', serif;
+    }
+    
+    .check-box-form > label > input {
+      margin-right: 0.5rem;
+    }
+    .pie-container {
+      height: auto;
+      background-color: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    #charts .chartjs-datalabels {
+      color: black;
+    }
