@@ -12,7 +12,9 @@ Rails.application.routes.draw do
     end
     get 'users/sign_out', to: 'devise/sessions#destroy'
   end
-
+   resources :categories, only: %i[index new create] do
+     resources :entities, only: %i[index new create]
+     end
   # Defines the root path route ("/")
   # root "articles#index"
 end

@@ -1,0 +1,44 @@
+
+<%= stylesheet_link_tag 'splash' %>
+
+<div class="container splash-div d-flex flex-column">
+  <div class="container">
+     <nav class="bg-main d-flex justify-content-between p-2 align-items-center">
+    <%= link_to unauthenticated_root_path, type: 'button' do %>
+      <%= image_tag('menu-icon.png', :size => "23x23", :class => "left-arrow") %>
+    <% end %>
+    <h2 class="category-title font-proxima-light fw-bold my-0 text-white fs-6">CATEGORIES</h2>
+    <%= link_to destroy_user_session_path, type: 'button' do %>
+    <i class="fa fa-sign-out" style="font-size:24px;color:#c19e7f"></i>
+
+    <% end %>
+  </nav>
+   
+  <% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: "#{name} generic-alert" %>
+  <% end -%>
+
+
+   <div class="d-flex flex-column py-1 px-2 mb-5">
+    
+    <div class=" pie-container align-self-end">
+         <span>Grand Total :&nbsp;&nbsp;<%= Rails.application.config.default_currency %>
+         <%= calculate_grand_total(current_user) %> </span>
+         <div id="charts">
+            <%= pie_chart @data, width: '100px', height: '100px', 
+             colors: ['#c19e7f', '#eeeeee', '#000000', '#1b2c00'], library: { pieSliceText: 'value', backgroundColor: 'transparent'} %>
+        </div>
+ </div>
+
+    <% @current_user.categories.each do |category| %>
+      <%= render 'category', category: category %>
+    <% end %>
+  </div>
+
+  <footer class="p-2 container d-flex justify-content-center">
+    <%= button_to 'ADD CATEGORY', new_category_path, method: :get, class: 'btn text-dark px-4' %>
+  </footer>
+</div>
+   </div>
+
+</div>
