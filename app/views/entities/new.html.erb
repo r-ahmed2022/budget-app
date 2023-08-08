@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag 'splash' %>
+
+<div class="container splash-div d-flex flex-column"> 
+ <%= form_with url: category_entities_path, method: :post do |f| %>
+  <nav class="d-flex justify-content-between p-2 align-items-center">
+    <div class="d-flex">
+      <%= link_to category_entities_path(@category), method: :get, type: 'button' do %>
+        <%= image_tag('navbar-left-arrow.png', :size => "23x23", :class => "left-arrow") %>
+      <% end %>
+      <h4 class="my-0">ADD TRANSACTION</h4>
+    </div>
+    <%= f.submit "Save" , class: 'btn align-self-end' %>
+  </nav>
+
+  <div class="d-flex flex-column w-100 px-3 my-3">
+    <div class="d-flex flex-column align-items-stretch">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Name', class: 'name no-outline border-0 color-text px-2 py-2 font-proxima-light' %>
+    </div>
+    <hr class="my-1">
+    <div class="d-flex flex-column align-items-stretch">
+      <%= f.number_field :amount, autocomplete: "amount", placeholder: 'Amount', class: 'amount no-outline border-0 color-text px-2 py-2 font-proxima-light' %>
+    </div>
+    <div>
+      <%= f.label :categories, "Categories", class: 'd-flex font-proxima-bold color-text' %>
+      <div class="check-box-form d-flex flex-column justify-content-start align-items-start">
+        <%= f.collection_check_boxes :categories, @categories, :id, :name, { include_hidden: false }  do |b| %>
+          <%= b.label { b.check_box + b.text } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <% end %>
+
+  <% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: "#{name} generic-alert" %>
+  <% end -%>
+</div>

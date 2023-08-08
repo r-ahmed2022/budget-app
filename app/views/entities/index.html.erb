@@ -1,0 +1,33 @@
+<%= stylesheet_link_tag 'splash' %>
+
+<div class="container splash-div d-flex flex-column">
+  <nav class="d-flex justify-content-between p-2 align-items-center">
+    <%= link_to user_path, type: 'button' do %>
+      <%= image_tag('navbar-left-arrow.png', :size => "23x23", :class => "left-arrow") %>
+    <% end %>
+    <h2 class="my-0">TRANSACTIONS</h2>
+    <%= image_tag('search-icon.png', :size => "23x23", :class => "left-arrow") %>
+  </nav>
+  <div class="border-gray-1 py-1 px-2 d-flex">
+    <img src="<%= @category.icon %>" alt="image" class="transaction-image align-self-center border border-gray-1 rounded-circle">
+    <span class="flex-grow-1 align-self-center mx-3">
+      <%= @category.name%>
+    </span>
+    <span class="align-self-center">
+      Total: <%= @category.total %>
+    </span>
+  </div>
+  <% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: "#{name} generic-alert" %>
+  <% end -%>
+
+  <div class="d-flex flex-column py-1 px-2 mb-5">
+    <% @category_entities.each do |category_entity| %>
+      <%= render 'entity', entity: category_entity %>
+    <% end %>
+  </div>
+
+  <footer class="container">
+    <%= button_to 'ADD TRANSACTION', new_category_entity_path, method: :get, class: 'btn border border-white rounded py-2' %>
+  </footer>
+</div>
