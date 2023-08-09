@@ -33,11 +33,11 @@
 
  A mobile application where user can manage their budget: user have a list of transactions associated with a category, so that they can see how much money they spent and on what.
 
-- [Click here]() to watch the overview video
+- [Click here](https://www.loom.com/share/c8d5b32dbc7145258578bdb3e287cc70) to watch the overview video
 
 ## Demo app <a name="demo-app"></a>
 
-- [Click here]() to try the demo app
+- [Click here](https://budgetapp-3foi.onrender.com/) to try the demo app
 
 
 ## 🛠 Built With <a name="built-with"></a>
