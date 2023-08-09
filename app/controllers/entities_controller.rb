@@ -1,5 +1,5 @@
 class EntitiesController < ApplicationController
-    load_and_authorize_resource
+  load_and_authorize_resource
 
   def index
     @category = Category.find(params[:category_id])

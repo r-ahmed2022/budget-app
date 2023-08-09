@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :set_user, only: %i[show create update destroy]
+  before_action :set_user, only: %i[show create update destroy]
   def index
     @user = current_user
   end
