@@ -3,7 +3,10 @@ Rails.application.routes.draw do
     registrations: 'devise/registrations',
     sessions: 'devise/sessions'
   }
-  devise_scope :user do
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+   #get '/categories', to: 'categories#index', as: 'categories'
+  # Defines the root path route ("/")
+   devise_scope :user do
     authenticated do
     root to: 'categories#index', as: 'user'
     end
@@ -12,9 +15,10 @@ Rails.application.routes.draw do
     end
     get 'users/sign_out', to: 'devise/sessions#destroy'
   end
+
    resources :categories, only: %i[index new create] do
-     resources :entities, only: %i[index new create]
-     end
-  # Defines the root path route ("/")
-  # root "articles#index"
+      resources :entities, only: %i[index new create]
+  end
+
+
 end
