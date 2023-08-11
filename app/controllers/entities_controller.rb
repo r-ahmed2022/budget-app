@@ -23,8 +23,8 @@ class EntitiesController < ApplicationController
             reload_page
             flash[:alert] = 'A transaction was not created!'
           end
-        end
-        redirect_to category_entities_path(category_id: params[:category_id])
+         end
+          redirect_to category_entities_path(category_id: params[:category_id])
         flash[:notice] = 'Transaction created successfully!'
       else
         reload_page
