@@ -37,7 +37,7 @@
 
 ## Demo app <a name="demo-app"></a>
 
-- [Click here](https://budgetapp-3foi.onrender.com/) to try the demo app
+- [Click here](https://budget-app-02s5.onrender.com/) to try the demo app
 
 
 ## 🛠 Built With <a name="built-with"></a>
