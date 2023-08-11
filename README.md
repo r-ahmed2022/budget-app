@@ -113,13 +113,13 @@ rails s
 To run a single Rspec test file, you can do the following to run the tests in the `your_spec.rb` file:
 
 ```shell
-rspec spec rspec/your_spec.rb
+rspec spec/model/user_spec.rb
 ```
 
 To run all Rspec test files in a directory
 
 ```shell
-rspec spec rspec
+rspec spec/models
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
