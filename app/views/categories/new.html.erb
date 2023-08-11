@@ -2,11 +2,11 @@
 
 <div class="container splash-div d-flex flex-column">
       <%= form_with model: @category, url: categories_path, method: :post do |f| %>
-  <nav class="bg-main d-flex justify-content-between p-2 align-items-center">
+  <nav class="navbar bg-main d-flex justify-content-between p-2 align-items-center">
     <%= link_to user_path, method: :get, type: 'button' do %>
            <%= image_tag('navbar-left-arrow.png', :size => "23x23", :class => "left-arrow") %>
     <% end %>
-    <h2 class="font-proxima-light fw-bold my-0 fs-6">ADD CATEGORY</h2>
+    <h2 class="font-proxima-light text-white fw-bold my-0 fs-6">ADD CATEGORY</h2>
     <%= f.submit "Save" , class: 'btn' %>
   </nav>
 

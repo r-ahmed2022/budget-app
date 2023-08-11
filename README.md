@@ -33,7 +33,7 @@
 
  A mobile application where user can manage their budget: user have a list of transactions associated with a category, so that they can see how much money they spent and on what.
 
-- [Click here](https://www.loom.com/share/c8d5b32dbc7145258578bdb3e287cc70) to watch the overview video
+- [Click here](https://www.loom.com/share/13b95308b43647d691f15aeee2e1ab4f?sid=feab2492-f4d7-43a0-8cf2-f804b8cca2be) to watch the overview video
 
 ## Demo app <a name="demo-app"></a>
 
@@ -113,13 +113,13 @@ rails s
 To run a single Rspec test file, you can do the following to run the tests in the `your_spec.rb` file:
 
 ```shell
-rspec spec rspec/your_spec.rb
+rspec spec/model/user_spec.rb
 ```
 
 To run all Rspec test files in a directory
 
 ```shell
-rspec spec rspec
+rspec spec/models
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

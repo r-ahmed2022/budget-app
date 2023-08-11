@@ -2,12 +2,12 @@
 
 <div class="container splash-div d-flex flex-column"> 
  <%= form_with url: category_entities_path, method: :post do |f| %>
-  <nav class="d-flex justify-content-between p-2 align-items-center">
+  <nav class="navbar d-flex justify-content-between p-2 align-items-center">
     <div class="d-flex">
       <%= link_to category_entities_path(@category), method: :get, type: 'button' do %>
         <%= image_tag('navbar-left-arrow.png', :size => "23x23", :class => "left-arrow") %>
       <% end %>
-      <h4 class="my-0">ADD TRANSACTION</h4>
+      <h4 class="my-0 text-white">ADD TRANSACTION</h4>
     </div>
     <%= f.submit "Save" , class: 'btn align-self-end' %>
   </nav>

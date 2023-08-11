@@ -1,11 +1,11 @@
 <%= stylesheet_link_tag 'splash' %>
 
 <div class="container splash-div d-flex flex-column">
-  <nav class="d-flex justify-content-between p-2 align-items-center">
+  <nav class="navbar d-flex justify-content-between p-2 align-items-center">
     <%= link_to user_path, type: 'button' do %>
       <%= image_tag('navbar-left-arrow.png', :size => "23x23", :class => "left-arrow") %>
     <% end %>
-    <h2 class="my-0">TRANSACTIONS</h2>
+    <h2 class="my-0 text-white">TRANSACTIONS</h2>
     <%= image_tag('search-icon.png', :size => "23x23", :class => "left-arrow") %>
   </nav>
   <div class="border-gray-1 py-1 px-2 d-flex">
@@ -27,7 +27,7 @@
     <% end %>
   </div>
 
-  <footer class="container">
-    <%= button_to 'ADD TRANSACTION', new_category_entity_path, method: :get, class: 'btn border border-white rounded py-2' %>
+  <footer>
+    <%= button_to 'ADD TRANSACTION', new_category_entity_path, method: :get, class: 'btn-1 border border-white rounded py-2' %>
   </footer>
 </div>

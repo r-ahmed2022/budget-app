@@ -1,6 +1,7 @@
 class Category < ApplicationRecord
   belongs_to :author, class_name: 'User'
   has_many :category_entities, foreign_key: 'category_id', class_name: 'CategoryEntity', dependent: :delete_all
+  has_many :entities, through: :category_entities
 
   validates :name, presence: true
   validates :icon, presence: true
