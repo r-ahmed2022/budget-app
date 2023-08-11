@@ -2,14 +2,14 @@
 <%= stylesheet_link_tag 'splash' %>
 
 <div class="container splash-div d-flex flex-column">
-  <div class="container">
-     <nav class="bg-main d-flex justify-content-between p-2 align-items-center">
+  <div class="container w-100">
+     <nav class=" navbar bg-main d-flex justify-content-between p-2 align-items-center">
     <%= link_to unauthenticated_root_path, type: 'button' do %>
       <%= image_tag('menu-icon.png', :size => "23x23", :class => "left-arrow") %>
     <% end %>
     <h2 class="category-title font-proxima-light fw-bold my-0 text-white fs-6">CATEGORIES</h2>
     <%= link_to destroy_user_session_path, type: 'button' do %>
-    <i class="fa fa-sign-out" style="font-size:24px;color:#c19e7f"></i>
+    <i class="fa fa-sign-out" style="font-size:24px;color:#fff"></i>
 
     <% end %>
   </nav>
@@ -26,7 +26,7 @@
          <%= calculate_grand_total(current_user) %> </span>
          <div id="charts">
             <%= pie_chart @data, width: '100px', height: '100px', 
-             colors: ['#c19e7f', '#eeeeee', '#000000', '#1b2c00'], library: { pieSliceText: 'value', backgroundColor: 'transparent'} %>
+             colors: ['#3778C2', '#5FB523', '#000000', '#1b2c00'], library: { pieSliceText: 'value', backgroundColor: 'transparent'} %>
         </div>
  </div>
 
@@ -35,8 +35,8 @@
     <% end %>
   </div>
 
-  <footer class="p-2 container d-flex justify-content-center">
-    <%= button_to 'ADD CATEGORY', new_category_path, method: :get, class: 'btn text-dark px-4' %>
+  <footer>
+    <%= button_to 'ADD CATEGORY', new_category_path, method: :get, class: 'btn-1 text-white' %>
   </footer>
 </div>
    </div>

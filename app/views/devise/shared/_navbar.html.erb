@@ -1,11 +1,11 @@
-<nav class="d-flex justify-content-between align-items-center">
+<nav class="navbar d-flex justify-content-between align-items-center">
   <%= link_to unauthenticated_root_path, method: :get, type: 'button', class: 'left-arrow'  do %>
     <%= image_tag('navbar-left-arrow.png', :size => "23x23") %>
   <% end %>
-  <h2 class="font-proxima-light fw-bold my-0 align-self-center text-white">
+  <h2 class="font-proxima-light text-white px-1 align-self-center">
     <%= 'REGISTER' if current_page?(new_user_registration_path) %>
     <%= 'LOGIN' if current_page?(new_user_session_path) %>
   </h2>
-  <%= f.submit "Next" , class: 'font-proxima-light  text-white bg-main border-0 btn p-0' if current_page?(new_user_registration_path) %>
-  <%= f.submit "Log In" , class: 'font-proxima-light  text-white bg-main border-0 btn p-0' if current_page?(new_user_session_path) %>
+  <%= f.submit "Next" , class: 'font-proxima-light  text-white bg-main border-0 btn p-1' if current_page?(new_user_registration_path) %>
+  <%= f.submit "Log In" , class: 'font-proxima-light  text-white bg-main border-0 btn p-2' if current_page?(new_user_session_path) %>
 </nav>

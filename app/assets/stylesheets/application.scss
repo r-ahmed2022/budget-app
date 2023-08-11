@@ -16,6 +16,14 @@
 
 @import "bootstrap";
 
+.navbar {
+  background-color: #3778C2;
+}
+
+.navbar-1 {
+  background-color: #3778C2;
+}
+
 .main-content {
   width: 90%;
   height: 100%;
@@ -33,16 +41,18 @@
 }
 
 .category {
-  box-shadow: -1px -1px 2px 2px #c19e7f;
+  box-shadow: -1px -1px 2px 2px #5FB523;
   margin: 1rem 0;
   padding: 1rem;
-  background-color: #d3e0d6;
+  background-color: #fff;
   color: #1c1c1c;
   position: relative;
 }
 
 input {
   background-color: #d3e0d6;
+  border: 0;
+  padding: .5rem;
 }
 
 .notinput {
@@ -60,7 +70,7 @@ input {
   left: 0;
   bottom: -5px;
   height: 20%;
-  background-color: #c19e7f;
+  background-color: #fff;
 }
 
 .category-image {
