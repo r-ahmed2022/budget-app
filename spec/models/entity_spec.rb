@@ -9,9 +9,9 @@ RSpec.describe Entity, type: :model do
     end
 
     it 'should validate presence of amount' do
-        entity = Entity.new(amount: '')
-        entity.valid?
-        expect(entity.errors[:amount]).to include("is not a number")
+      entity = Entity.new(amount: '')
+      entity.valid?
+      expect(entity.errors[:amount]).to include('is not a number')
     end
   end
 
@@ -20,6 +20,5 @@ RSpec.describe Entity, type: :model do
       entity = Entity.reflect_on_association(:author)
       expect(entity.macro).to eq(:belongs_to)
     end
-
-    end
+  end
 end
